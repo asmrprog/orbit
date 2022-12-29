@@ -1,12 +1,14 @@
 import * as React from "react";
 import { render, screen, act } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import userEvent, { PointerEventsCheckLevel } from "@testing-library/user-event";
 
 import InputFile from "..";
 import SPACINGS_AFTER from "../../common/getSpacingToken/consts";
 
 describe("InputFile", () => {
-  it("should have expected DOM output", () => {
+  const user = userEvent.setup({ pointerEventsCheck: PointerEventsCheckLevel.Never });
+
+  it("should have expected DOM output", async () => {
     const label = "Select file";
     const buttonLabel = "Click on me";
     const name = "name";
@@ -43,9 +45,8 @@ describe("InputFile", () => {
     expect(input).toHaveAttribute("tabindex", "-1");
     expect(input).toHaveAttribute("accept", ".png,.jpg,.pdf");
 
-    // Commented until testing-library is updated to support skip pointer events check
-    // userEvent.upload(input, file);
-    // expect(onChange).toHaveBeenCalled();
+    await user.upload(input, file);
+    expect(onChange).toHaveBeenCalled();
   });
 
   it("should have passed width", () => {
@@ -54,13 +55,13 @@ describe("InputFile", () => {
     expect(document.querySelector("label")).toHaveStyle({ width });
   });
 
-  it("should have filename, onRemoveFile", () => {
+  it("should have filename, onRemoveFile", async () => {
     const onRemoveFile = jest.fn();
 
     render(<InputFile fileName="bur" onRemoveFile={onRemoveFile} />);
 
     const button = screen.getByRole("button", { name: "remove" });
-    userEvent.click(button);
+    await user.click(button);
     expect(onRemoveFile).toHaveBeenCalled();
   });
 
@@ -76,14 +77,12 @@ describe("InputFile", () => {
       />,
     );
 
-    userEvent.tab();
+    await act(() => user.tab());
     expect(onFocus).toHaveBeenCalled();
 
     expect(screen.getByText("chuck norris counted to infinity twice")).toBeInTheDocument();
 
-    userEvent.tab();
+    await act(() => user.tab());
     expect(onBlur).toHaveBeenCalled();
-
-    await act(async () => {});
   });
 });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultTokens should match snapshot 1`] = `
-Object {
+{
   "backgroundAlertCritical": "#FAEAEA",
   "backgroundAlertInfo": "#E8F4FD",
   "backgroundAlertSuccess": "#EAF5EA",
@@ -527,7 +527,7 @@ Object {
 `;
 
 exports[`fromPlainObject should create full theme should match snapshot 1`] = `
-Object {
+{
   "backgroundAlertCritical": "#FAEAEA",
   "backgroundAlertInfo": "#E8F4FD",
   "backgroundAlertSuccess": "#EAF5EA",
@@ -1053,7 +1053,7 @@ Object {
 `;
 
 exports[`getTokens should accept some base should match snapshot 1`] = `
-Object {
+{
   "backgroundAlertCritical": "#FAEAEA",
   "backgroundAlertInfo": "#E8F4FD",
   "backgroundAlertSuccess": "#EAF5EA",
@@ -1579,7 +1579,7 @@ Object {
 `;
 
 exports[`getTokens should accept some palette and base foundation should match snapshot 1`] = `
-Object {
+{
   "backgroundAlertCritical": "#FAEAEA",
   "backgroundAlertInfo": "#E8F4FD",
   "backgroundAlertSuccess": "#EAF5EA",
