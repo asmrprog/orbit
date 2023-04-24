@@ -1,0 +1,42 @@
+{
+  "global": {
+    "space": {
+      "X-X-XSmall": {
+        "type": "size",
+        "value": "{foundation.space.X-X-XSmall}"
+      },
+      "X-XSmall": {
+        "type": "size",
+        "value": "{foundation.space.X-XSmall}"
+      },
+      "X-Small": {
+        "type": "size",
+        "value": "{foundation.space.X-Small}"
+      },
+      "small": {
+        "type": "size",
+        "value": "{foundation.space.small}"
+      },
+      "medium": {
+        "type": "size",
+        "value": "{foundation.space.medium}"
+      },
+      "large": {
+        "type": "size",
+        "value": "{foundation.space.large}"
+      },
+      "X-Large": {
+        "type": "size",
+        "value": "{foundation.space.X-Large}"
+      },
+      "X-XLarge": {
+        "type": "size",
+        "value": "{foundation.space.X-XLarge}"
+      },
+      "X-X-XLarge": {
+        "type": "size",
+        "value": "{foundation.space.X-X-XLarge}"
+      }
+    }
+  }
+}

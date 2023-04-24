@@ -1,0 +1,51 @@
+{
+  "foundation": {
+    "space": {
+      "X-X-XSmall": {
+        "type": "size",
+        "value": 2,
+        "internal": true
+      },
+      "X-XSmall": {
+        "type": "size",
+        "value": 4,
+        "internal": true
+      },
+      "X-Small": {
+        "type": "size",
+        "value": 8,
+        "internal": true
+      },
+      "small": {
+        "type": "size",
+        "value": 12,
+        "internal": true
+      },
+      "medium": {
+        "type": "size",
+        "value": 16,
+        "internal": true
+      },
+      "large": {
+        "type": "size",
+        "value": 24,
+        "internal": true
+      },
+      "X-Large": {
+        "type": "size",
+        "value": 32,
+        "internal": true
+      },
+      "X-XLarge": {
+        "type": "size",
+        "value": 40,
+        "internal": true
+      },
+      "X-X-XLarge": {
+        "type": "size",
+        "value": 52,
+        "internal": true
+      }
+    }
+  }
+}
