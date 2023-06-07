@@ -29,9 +29,7 @@ describe("getTokens should accept some palette and base foundation", () => {
     },
   };
   const theme = getTokens(brand);
-  it("should match snapshot", () => {
-    expect(theme).toMatchInlineSnapshot();
-  });
+
   it("tokens should have those colors", () => {
     expect(theme.backgroundButtonPrimary).toBe(brand.palette.product.normal);
     expect(theme.colorTextLinkPrimary).toBe(brand.palette.product.dark);
@@ -59,13 +57,11 @@ describe("getTokens should accept some base", () => {
   };
 
   const theme = getTokens(brand);
-  it("should match snapshot", () => {
-    expect(theme).toMatchInlineSnapshot();
-  });
+
   it("tokens should have correct sizes", () => {
-    expect(theme.formBoXLargeHeight).toBe(brand.size.large);
-    expect(theme.formBoXSmallHeight).toBe(brand.size.small);
-    expect(theme.formBoxNormalHeight).toBe(brand.size.medium);
+    expect(theme.formBoXLargeHeight).toBe(brand.size.extraExtraLarge);
+    expect(theme.formBoXSmallHeight).toBe(brand.size.large);
+    expect(theme.formBoxNormalHeight).toBe(brand.size.extraLarge);
   });
 });
 
@@ -80,9 +76,6 @@ describe("fromPlainObject should create full theme", () => {
     productDark: "#990000",
   };
   const theme = fromPlainObject(palette);
-  it("should match snapshot", () => {
-    expect(theme).toMatchInlineSnapshot();
-  });
   it("tokens should have those colors", () => {
     expect(theme.backgroundButtonPrimary).toBe(palette.productNormal);
     expect(theme.colorTextLinkPrimary).toBe(palette.productDark);

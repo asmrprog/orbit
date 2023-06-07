@@ -757,13 +757,21 @@ Object {
   "spaceXXSmall": "4px",
   "spaceXXXLarge": "52px",
   "spaceXXXSmall": "2px",
-  "tabBackgroundBundleBasic": "linear-gradient(80.91deg, #E13E3B 0%, #E87E09 100%)",
-  "tabBackgroundBundleBasicActive": "rgba(215, 51, 28, 0.12)",
-  "tabBackgroundBundleBasicHover": "rgba(215, 51, 28, 0.08)",
-  "tabBackgroundBundleMedium": "linear-gradient(80.91deg, #3719AB  0%, #8539DB 100%)",
-  "tabBackgroundBundleMediumActive": "rgba(59, 30, 176, 0.12)",
-  "tabBackgroundBundleMediumHover": "rgba(59, 30, 176, 0.08)",
-  "tabBackgroundBundleTop": "linear-gradient(80.91deg, #2D2D2E 0%, #696E73 100%)",
+  "tabBundleBasicBackground": "linear-gradient(80.91deg, #E13E3B 0%, #E87E09 100%)",
+  "tabBundleBasicBackgroundActive": "rgba(215, 51, 28, 0.12)",
+  "tabBundleBasicBackgroundHover": "rgba(215, 51, 28, 0.08)",
+  "tabBundleMediumBackground": "linear-gradient(80.91deg, #3719AB  0%, #8539DB 100%)",
+  "tabBundleMediumBackgroundActive": "rgba(59, 30, 176, 0.12)",
+  "tabBundleMediumBackgroundHover": "rgba(59, 30, 176, 0.08)",
+  "tabBundleTopBackground": "linear-gradient(80.91deg, #2D2D2E 0%, #696E73 100%)",
+  "tagColoredBackground": "#E8F4FD",
+  "tagColoredBackgroundActive": "#C7E4FA",
+  "tagColoredBackgroundHover": "#DEF0FC",
+  "tagColoredForeground": "#004680",
+  "tagNeutralBackground": "#E8EDF1",
+  "tagNeutralBackgroundActive": "#CAD4DE",
+  "tagNeutralBackgroundHover": "#DCE3E9",
+  "tagNeutralForeground": "#252A31",
   "textCriticalForeground": "#D21C1C",
   "textDecorationTextLinkPrimary": "underline",
   "textDecorationTextLinkPrimaryHover": "none",
@@ -807,6 +815,7 @@ Object {
   "zIndexSticky": 100,
 }
 `;
+<<<<<<< HEAD
 
 exports[`fromPlainObject should create full theme should match snapshot 1`] = `
 Object {
@@ -3231,3 +3240,5 @@ Object {
   "zIndexSticky": 100,
 }
 `;
+=======
+>>>>>>> 1c79711cc (test: update snapshots)
