@@ -9,7 +9,7 @@
           "attributes": {
             "spacing": {
               "top": 0,
-              "right": "{foundation.space.X-XSmall}",
+              "right": "{foundation.space.x-x-small}",
               "left": 0,
               "bottom": 0
             }

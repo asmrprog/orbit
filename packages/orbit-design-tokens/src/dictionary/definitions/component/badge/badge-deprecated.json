@@ -8,7 +8,7 @@
         "attributes": {
           "spacing": {
             "top-bottom": 0,
-            "left-right": "{foundation.space.X-XSmall}"
+            "left-right": "{foundation.space.x-x-small}"
           }
         },
         "deprecated": true,

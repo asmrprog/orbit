@@ -1,4 +1,5 @@
 import { DesignToken } from "style-dictionary";
+import _ from "lodash";
 
 import { getValue } from "./get.js";
 import { isSpacingWithFourValues, isSpacingWithThreeValues, isSpacingWithTwoValues } from "./is.js";
@@ -60,13 +61,5 @@ export const flattenSpacing = (
   throw new Error(`Unexpected value of spacing token ${name}. Please double check its definition.`);
 };
 
-export const renameSpacing = (name?: string) => {
-  if (!name) return undefined;
-
-  if (name.match(/xXX/)) return name.replace(/xXX/, "XXX");
-  if (name.match(/xX/)) return name.replace(/xX/, "XX");
-  if (name.match(/xLarge/)) return name.replace(/xLarge/, "XLarge");
-  if (name.match(/xSmall/)) return name.replace(/xSmall/, "XSmall");
-
-  return name;
-};
+export const firstToUpper = (key: string, condition: boolean) =>
+  condition ? _.upperFirst(key) : key;

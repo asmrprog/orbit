@@ -298,7 +298,7 @@
       },
       "button-icon": {
         "type": "size",
-        "value": "{foundation.space.X-Small}",
+        "value": "{foundation.space.x-small}",
         "deprecated": true,
         "deprecated-version": "1.0.0"
       }

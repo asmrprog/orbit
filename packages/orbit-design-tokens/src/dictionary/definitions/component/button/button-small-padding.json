@@ -20,7 +20,7 @@
           "attributes": {
             "spacing": {
               "top-bottom": 0,
-              "left-right": "{foundation.space.X-Small}"
+              "left-right": "{foundation.space.x-small}"
             }
           }
         },
@@ -33,7 +33,7 @@
               "top": 0,
               "right": "{foundation.space.small}",
               "bottom": 0,
-              "left": "{foundation.space.X-Small}"
+              "left": "{foundation.space.x-small}"
             }
           }
         },
@@ -44,7 +44,7 @@
           "attributes": {
             "spacing": {
               "top": 0,
-              "right": "{foundation.space.X-Small}",
+              "right": "{foundation.space.x-small}",
               "bottom": 0,
               "left": "{foundation.space.small}"
             }
@@ -75,7 +75,7 @@
           "attributes": {
             "spacing": {
               "top-bottom": 0,
-              "left-right": "{foundation.space.X-Small}"
+              "left-right": "{foundation.space.x-small}"
             }
           },
           "deprecated": true,
@@ -91,7 +91,7 @@
               "top": 0,
               "right": "{foundation.space.small}",
               "bottom": 0,
-              "left": "{foundation.space.X-Small}"
+              "left": "{foundation.space.x-small}"
             }
           },
           "deprecated": true,
@@ -105,7 +105,7 @@
           "attributes": {
             "spacing": {
               "top": 0,
-              "right": "{foundation.space.X-Small}",
+              "right": "{foundation.space.x-small}",
               "bottom": 0,
               "left": "{foundation.space.small}"
             }

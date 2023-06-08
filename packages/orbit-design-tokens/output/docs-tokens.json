@@ -16903,7 +16903,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-X-XSmall"
+      "variant": "x-x-x-small"
     },
     "javascript": {
       "name": "spaceXXXSmall",
@@ -16923,7 +16923,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-XSmall"
+      "variant": "x-x-small"
     },
     "javascript": {
       "name": "spaceXXSmall",
@@ -16943,7 +16943,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-Small"
+      "variant": "x-small"
     },
     "javascript": {
       "name": "spaceXSmall",
@@ -17023,7 +17023,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-Large"
+      "variant": "x-large"
     },
     "javascript": {
       "name": "spaceXLarge",
@@ -17043,7 +17043,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-XLarge"
+      "variant": "x-x-large"
     },
     "javascript": {
       "name": "spaceXXLarge",
@@ -17063,7 +17063,7 @@
     "schema": {
       "namespace": "global",
       "object": "space",
-      "variant": "X-X-XLarge"
+      "variant": "x-x-x-large"
     },
     "javascript": {
       "name": "spaceXXXLarge",

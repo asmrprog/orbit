@@ -74,7 +74,7 @@
         "attributes": {
           "spacing": {
             "top-bottom": 6,
-            "left-right": "{foundation.space.X-Small}"
+            "left-right": "{foundation.space.x-small}"
           }
         },
         "deprecated": true,
@@ -89,7 +89,7 @@
             "top": 6,
             "right": 6,
             "bottom": 6,
-            "left": "{foundation.space.X-Small}"
+            "left": "{foundation.space.x-small}"
           }
         },
         "deprecated": true,
@@ -108,7 +108,7 @@
         "attributes": {
           "spacing": {
             "top": 6,
-            "right": "{foundation.space.X-Small}",
+            "right": "{foundation.space.x-small}",
             "bottom": 6,
             "left": 6
           }

@@ -1,17 +1,17 @@
 {
   "global": {
     "space": {
-      "X-X-XSmall": {
+      "x-x-x-small": {
         "type": "size",
-        "value": "{foundation.space.X-X-XSmall}"
+        "value": "{foundation.space.x-x-x-small}"
       },
-      "X-XSmall": {
+      "x-x-small": {
         "type": "size",
-        "value": "{foundation.space.X-XSmall}"
+        "value": "{foundation.space.x-x-small}"
       },
-      "X-Small": {
+      "x-small": {
         "type": "size",
-        "value": "{foundation.space.X-Small}"
+        "value": "{foundation.space.x-small}"
       },
       "small": {
         "type": "size",
@@ -25,17 +25,17 @@
         "type": "size",
         "value": "{foundation.space.large}"
       },
-      "X-Large": {
+      "x-large": {
         "type": "size",
-        "value": "{foundation.space.X-Large}"
+        "value": "{foundation.space.x-large}"
       },
-      "X-XLarge": {
+      "x-x-large": {
         "type": "size",
-        "value": "{foundation.space.X-XLarge}"
+        "value": "{foundation.space.x-x-large}"
       },
-      "X-X-XLarge": {
+      "x-x-x-large": {
         "type": "size",
-        "value": "{foundation.space.X-X-XLarge}"
+        "value": "{foundation.space.x-x-x-large}"
       }
     }
   }

@@ -86,7 +86,7 @@
         "value": null,
         "attributes": {
           "spacing": {
-            "top-bottom": "{foundation.space.X-Small}",
+            "top-bottom": "{foundation.space.x-small}",
             "left-right": "{foundation.space.small}"
           }
         },

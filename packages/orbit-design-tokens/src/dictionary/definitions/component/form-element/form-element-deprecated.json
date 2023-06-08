@@ -11,7 +11,7 @@
     "margin-top": {
       "form-feedback": {
         "type": "size",
-        "value": "{foundation.space.X-X-XSmall}",
+        "value": "{foundation.space.x-x-x-small}",
         "deprecated": true,
         "deprecated-version": "1.0.0"
       }

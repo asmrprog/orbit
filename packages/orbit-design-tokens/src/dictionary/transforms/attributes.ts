@@ -12,9 +12,11 @@ import {
   isSpacingWithThreeValues,
   isSpacingWithFourValues,
 } from "../utils/is.js";
-import { falsyString, pixelized, renameSpacing } from "../utils/string.js";
+import { falsyString, pixelized, firstToUpper } from "../utils/string.js";
 
-const NOV_STRUCTURE = ["namespace", "object", "variant", "subVariant"];
+type Structure = "namespace" | "object" | "variant" | "subVariant";
+
+const NOV_STRUCTURE: Structure[] = ["namespace", "object", "variant", "subVariant"];
 
 /*
   The basic attribute transformer, adds serialized path info to the property.
@@ -60,13 +62,13 @@ export const attributeNOVCamelCase = {
   name: "attribute/nov/camelCase",
   type: "attribute",
   transformer: ({ attributes }: DesignToken) => {
-    const camelCased = {};
+    const camelCased = {} as Record<Structure, string>;
     const tempAttrs: Record<string, string> = {};
 
     // eslint-disable-next-line no-restricted-syntax
     for (const key of NOV_STRUCTURE) {
       if (attributes[key]) {
-        camelCased[key] = renameSpacing(_.camelCase(String(attributes[key])));
+        camelCased[key] = _.camelCase(String(attributes[key]));
         tempAttrs[key] = String(attributes[key]);
       }
     }
@@ -77,7 +79,13 @@ export const attributeNOVCamelCase = {
       Object.values({ object, variant, subVariant }).filter(Boolean).join(" "),
     );
 
-    return { ...attributes, ...camelCased, name };
+    // tokens like spaceXXXLarge should have first letter upperCased
+    const parsedVariant = firstToUpper(
+      camelCased.variant,
+      camelCased.object === "space" && !["large", "small", "medium"].includes(camelCased.variant),
+    );
+
+    return { ...attributes, ...camelCased, variant: parsedVariant, name };
   },
 };
 
@@ -94,9 +102,14 @@ export const attributeNOVAlias = {
       throw new Error(errorTransform("attribute/nov/alias", "attribute/nov"));
     }
 
-    const foundationAlias = renameSpacing(subVariant || variant);
+    const parsedVariant =
+      object === "space" && !["large", "small", "medium"].includes(variant)
+        ? _.upperFirst(variant)
+        : variant;
 
-    return { ...attributes, foundationAlias };
+    const foundationAlias = subVariant || parsedVariant;
+
+    return { namespace, object, variant: parsedVariant, subVariant, foundationAlias };
   },
 };
 

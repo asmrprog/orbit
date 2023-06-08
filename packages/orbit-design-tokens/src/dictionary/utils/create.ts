@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import { falsyString, renameSpacing } from "./string.js";
+import { falsyString } from "./string.js";
 
 const getDelimiter = (platform: "javascript" | "typescript" | "css") => {
   switch (platform) {
@@ -11,7 +11,7 @@ const getDelimiter = (platform: "javascript" | "typescript" | "css") => {
   }
 };
 
-/*
+/**
   Returns variable declaration, e.g. const Test = value
  */
 export const createVariableDeclarator = (
@@ -24,7 +24,7 @@ export const createVariableDeclarator = (
   return [exportString, type, name, "=", value].join(" ").trim();
 };
 
-/*
+/**
   Create arrow function expression from given parameters and value.
   e.g. ( par1, par2 ) => value
  */
@@ -36,7 +36,7 @@ export const createArrowFunctionExpression = (
   return ["(", plainParameters, ")", "=>", returnValue].join(" ").trim();
 };
 
-/*
+/**
   Creates equivalent type for TS for cases when the key: value are the same.
   e.g. name: Name
  */
@@ -71,7 +71,7 @@ export const createValue = (values: string[], platform: "javascript" | "typescri
   Creates compatible property of object for all platforms
  */
 export const createObjectProperty = (name: string, value: string | number): string => {
-  return `${renameSpacing(name)}:${value}`;
+  return `${name}:${value}`;
 };
 
 /*
@@ -95,9 +95,8 @@ export const createDeclareModule = (path: string): string => `declare module "${
 
 export const createOptionalType = (name: string): string => `${name}?`;
 
-/*
-  Creates subset type - both for TS/Flow.
-  e.g. $Shape<Name>
+/**
+  Creates subset type
  */
 
 export const createSubsetType = (name: string): string => {
@@ -105,7 +104,7 @@ export const createSubsetType = (name: string): string => {
   return `${subsetType}<${_.upperFirst(name)}>`;
 };
 
-/*
+/**
   Creates default import of something.
   e.g. import Something from "path"
  */
@@ -113,7 +112,7 @@ export const createSubsetType = (name: string): string => {
 export const createDefaultImport = (name: string, path: string): string =>
   `import ${name} from "${path}"\n`;
 
-/*
+/**
   Creates import of some type.
   e.g. import type { Type } from "path"
  */

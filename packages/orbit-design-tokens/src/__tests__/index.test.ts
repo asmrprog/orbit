@@ -59,8 +59,8 @@ describe("getTokens should accept some base", () => {
   const theme = getTokens(brand);
 
   it("tokens should have correct sizes", () => {
-    expect(theme.formBoXLargeHeight).toBe(brand.size.extraExtraLarge);
-    expect(theme.formBoXSmallHeight).toBe(brand.size.large);
+    expect(theme.formBoxLargeHeight).toBe(brand.size.extraExtraLarge);
+    expect(theme.formBoxSmallHeight).toBe(brand.size.large);
     expect(theme.formBoxNormalHeight).toBe(brand.size.extraLarge);
   });
 });

@@ -524,9 +524,9 @@ export type Tokens = {
   heightInputGroupSeparatorNormal: string;
   heightIllustrationSmall: string;
   heightIllustrationMedium: string;
-  formBoXSmallHeight: string;
+  formBoxSmallHeight: string;
   formBoxNormalHeight: string;
-  formBoXLargeHeight: string;
+  formBoxLargeHeight: string;
   formElementBackground: string;
   formElementDisabledBackground: string;
   formElementDisabledForeground: string;
@@ -1343,9 +1343,9 @@ const createTokens: CreateTokens = foundation => ({
   heightInputGroupSeparatorNormal: "20px",
   heightIllustrationSmall: "90px",
   heightIllustrationMedium: "200px",
-  formBoXSmallHeight: foundation.size.large,
+  formBoxSmallHeight: foundation.size.large,
   formBoxNormalHeight: foundation.size.extraLarge,
-  formBoXLargeHeight: foundation.size.extraExtraLarge,
+  formBoxLargeHeight: foundation.size.extraExtraLarge,
   formElementBackground: foundation.palette.white.normal,
   formElementDisabledBackground: foundation.palette.cloud.normal,
   formElementDisabledForeground: foundation.palette.cloud.dark,
