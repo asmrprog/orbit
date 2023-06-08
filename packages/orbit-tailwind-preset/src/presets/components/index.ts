@@ -39,7 +39,9 @@ const cfg: Config["theme"] = {
       },
       colors: {
         ...COLORS.reduce((acc, name) => {
-          acc[name] = {
+          // eslint-disable-next-line no-param-reassign
+          acc = {
+            ...acc,
             ...getComponentLevelToken(name, "background"),
             ...getComponentLevelToken(name, "backgroundHover"),
             ...getComponentLevelToken(name, "backgroundActive"),
