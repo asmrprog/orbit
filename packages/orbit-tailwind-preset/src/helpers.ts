@@ -12,12 +12,15 @@ export type ExportedComponentLevelTokens =
   | "textLink"
   | "text"
   | "heading"
+  | "formBox"
+  | "illustration"
   | "formElement"
   | "table"
   | "switch"
   | "tooltip"
   | "carrierLogo"
   | "countryFlag"
+  | "socialButton"
   | "card";
 
 type ExportedComponentLevelTypes =
@@ -67,7 +70,7 @@ export const getComponentLevelToken = (
 
     if (k.startsWith(c) && k.endsWith(t)) {
       if (defaultTokens[key]) {
-        acc[key] = defaultTokens[key];
+        acc[kebabCase(key)] = defaultTokens[key];
       }
     }
 

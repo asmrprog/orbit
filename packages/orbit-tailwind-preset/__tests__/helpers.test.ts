@@ -157,80 +157,80 @@ describe("orbit-tailwind-preset", () => {
   it("should get component level token", () => {
     expect(getComponentLevelToken("heading", "fontSize")).toMatchInlineSnapshot(`
       Object {
-        "headingDisplayFontSize": "40px",
-        "headingDisplaySubtitleFontSize": "22px",
-        "headingTitle1FontSize": "28px",
-        "headingTitle2FontSize": "22px",
-        "headingTitle3FontSize": "16px",
-        "headingTitle4FontSize": "15px",
-        "headingTitle5FontSize": "13px",
-        "headingTitle6FontSize": "13px",
+        "heading-display-font-size": "40px",
+        "heading-display-subtitle-font-size": "22px",
+        "heading-title1font-size": "28px",
+        "heading-title2font-size": "22px",
+        "heading-title3font-size": "16px",
+        "heading-title4font-size": "15px",
+        "heading-title5font-size": "13px",
+        "heading-title6font-size": "13px",
       }
     `);
 
     expect(getComponentLevelToken("heading", "lineHeight")).toMatchInlineSnapshot(`
       Object {
-        "headingDisplayLineHeight": "44px",
-        "headingDisplaySubtitleLineHeight": "28px",
-        "headingTitle1LineHeight": "36px",
-        "headingTitle2LineHeight": "28px",
-        "headingTitle3LineHeight": "24px",
-        "headingTitle4LineHeight": "20px",
-        "headingTitle5LineHeight": "20px",
-        "headingTitle6LineHeight": "20px",
+        "heading-display-line-height": "44px",
+        "heading-display-subtitle-line-height": "28px",
+        "heading-title1line-height": "36px",
+        "heading-title2line-height": "28px",
+        "heading-title3line-height": "24px",
+        "heading-title4line-height": "20px",
+        "heading-title5line-height": "20px",
+        "heading-title6line-height": "20px",
       }
     `);
 
     expect(getComponentLevelToken("heading", "fontWeight")).toMatchInlineSnapshot(`
       Object {
-        "headingDisplayFontWeight": "700",
-        "headingDisplaySubtitleFontWeight": "400",
-        "headingTitle1FontWeight": "700",
-        "headingTitle2FontWeight": "500",
-        "headingTitle3FontWeight": "500",
-        "headingTitle4FontWeight": "500",
-        "headingTitle5FontWeight": "700",
-        "headingTitle6FontWeight": "700",
+        "heading-display-font-weight": "700",
+        "heading-display-subtitle-font-weight": "400",
+        "heading-title1font-weight": "700",
+        "heading-title2font-weight": "500",
+        "heading-title3font-weight": "500",
+        "heading-title4font-weight": "500",
+        "heading-title5font-weight": "700",
+        "heading-title6font-weight": "700",
       }
     `);
 
     expect(getComponentLevelToken("button", "background")).toMatchInlineSnapshot(`
       Object {
-        "buttonBundleBasicBackground": "linear-gradient(to top right, #E13E3B 0%, #E87E09 100%)",
-        "buttonBundleMediumBackground": "linear-gradient(to top right, #3719AB 0%, #8539DB 100%)",
-        "buttonBundleTopBackground": "linear-gradient(to top right, #2D2D2E 0%, #696E73 100%)",
-        "buttonCriticalBackground": "#D21C1C",
-        "buttonCriticalSubtleBackground": "#FAEAEA",
-        "buttonInfoBackground": "#0172CB",
-        "buttonLinkCriticalBackground": "transparent",
-        "buttonLinkPrimaryBackground": "transparent",
-        "buttonLinkSecondaryBackground": "transparent",
-        "buttonPrimaryBackground": "#00A58E",
-        "buttonPrimarySubtleBackground": "#E1F4F3",
-        "buttonSecondaryBackground": "#E8EDF1",
-        "buttonSuccessBackground": "#28A138",
-        "buttonWarningBackground": "#DF7B00",
-        "buttonWhiteBackground": "#FFFFFF",
+        "button-bundle-basic-background": "linear-gradient(to top right, #E13E3B 0%, #E87E09 100%)",
+        "button-bundle-medium-background": "linear-gradient(to top right, #3719AB 0%, #8539DB 100%)",
+        "button-bundle-top-background": "linear-gradient(to top right, #2D2D2E 0%, #696E73 100%)",
+        "button-critical-background": "#D21C1C",
+        "button-critical-subtle-background": "#FAEAEA",
+        "button-info-background": "#0172CB",
+        "button-link-critical-background": "transparent",
+        "button-link-primary-background": "transparent",
+        "button-link-secondary-background": "transparent",
+        "button-primary-background": "#00A58E",
+        "button-primary-subtle-background": "#E1F4F3",
+        "button-secondary-background": "#E8EDF1",
+        "button-success-background": "#28A138",
+        "button-warning-background": "#DF7B00",
+        "button-white-background": "#FFFFFF",
       }
     `);
 
     expect(getComponentLevelToken("button", "backgroundHover")).toMatchInlineSnapshot(`
       Object {
-        "buttonBundleBasicBackgroundHover": "linear-gradient(to top right, #BD2825 0%, #D67000 100%)",
-        "buttonBundleMediumBackgroundHover": "linear-gradient(to top right, #BD2825 0%, #D67000 100%)",
-        "buttonBundleTopBackgroundHover": "linear-gradient(to top right, #171718 0%, #51575C 100%)",
-        "buttonCriticalBackgroundHover": "#B91919",
-        "buttonCriticalSubtleBackgroundHover": "#F8E2E2",
-        "buttonInfoBackgroundHover": "#0161AC",
-        "buttonLinkCriticalBackgroundHover": "#F8E2E2",
-        "buttonLinkPrimaryBackgroundHover": "#D6F0EC",
-        "buttonLinkSecondaryBackgroundHover": "#E5EAEF",
-        "buttonPrimaryBackgroundHover": "#009580",
-        "buttonPrimarySubtleBackgroundHover": "#D6F0EC",
-        "buttonSecondaryBackgroundHover": "#DCE3E9",
-        "buttonSuccessBackgroundHover": "#238B31",
-        "buttonWarningBackgroundHover": "#C96F00",
-        "buttonWhiteBackgroundHover": "#F5F7F9",
+        "button-bundle-basic-background-hover": "linear-gradient(to top right, #BD2825 0%, #D67000 100%)",
+        "button-bundle-medium-background-hover": "linear-gradient(to top right, #BD2825 0%, #D67000 100%)",
+        "button-bundle-top-background-hover": "linear-gradient(to top right, #171718 0%, #51575C 100%)",
+        "button-critical-background-hover": "#B91919",
+        "button-critical-subtle-background-hover": "#F8E2E2",
+        "button-info-background-hover": "#0161AC",
+        "button-link-critical-background-hover": "#F8E2E2",
+        "button-link-primary-background-hover": "#D6F0EC",
+        "button-link-secondary-background-hover": "#E5EAEF",
+        "button-primary-background-hover": "#009580",
+        "button-primary-subtle-background-hover": "#D6F0EC",
+        "button-secondary-background-hover": "#DCE3E9",
+        "button-success-background-hover": "#238B31",
+        "button-warning-background-hover": "#C96F00",
+        "button-white-background-hover": "#F5F7F9",
       }
     `);
   });

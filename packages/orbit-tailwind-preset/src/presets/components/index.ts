@@ -3,8 +3,7 @@ import { defaultTokens } from "@kiwicom/orbit-design-tokens";
 
 import { getComponentLevelToken, ExportedComponentLevelTokens } from "../../helpers";
 
-const COMPONENTS: ExportedComponentLevelTokens[] = [
-  "alert",
+const COLORS: Partial<ExportedComponentLevelTokens>[] = [
   "button",
   "buttonLink",
   "formElement",
@@ -13,12 +12,6 @@ const COMPONENTS: ExportedComponentLevelTokens[] = [
   "textLink",
   "text",
   "heading",
-  "table",
-  "switch",
-  "tooltip",
-  "carrierLogo",
-  "countryFlag",
-  "card",
 ];
 
 const cfg: Config["theme"] = {
@@ -45,7 +38,7 @@ const cfg: Config["theme"] = {
         drawer: defaultTokens.zIndexDrawer,
       },
       colors: {
-        ...COMPONENTS.reduce((acc, name) => {
+        ...COLORS.reduce((acc, name) => {
           acc[name] = {
             ...getComponentLevelToken(name, "background"),
             ...getComponentLevelToken(name, "backgroundHover"),
