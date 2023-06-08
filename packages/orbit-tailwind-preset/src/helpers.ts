@@ -1,5 +1,15 @@
 import type { defaultFoundation } from "@kiwicom/orbit-design-tokens";
 import { defaultTokens } from "@kiwicom/orbit-design-tokens";
+import type { Config } from "tailwindcss";
+
+const PREFIX = "orbit-";
+
+export interface Options {
+  /** default: `true` eg does not include the tailwind preflight */
+  disablePreflight?: boolean;
+  /** default: [] */
+  content: [];
+}
 
 const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 
@@ -77,3 +87,16 @@ export const getComponentLevelToken = (
     return acc;
   }, {});
 };
+
+type PresetCfg = (cfg: Partial<Config>, options: Options) => Config;
+
+export const presetCfg: PresetCfg = (cfg, { content = [], disablePreflight = true }): Config => ({
+  prefix: PREFIX,
+  content,
+  // do not include default tailwind config
+  presets: [],
+  corePlugins: {
+    preflight: disablePreflight,
+  },
+  ...cfg,
+});

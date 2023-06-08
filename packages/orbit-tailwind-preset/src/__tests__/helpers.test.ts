@@ -1,6 +1,6 @@
 import { defaultFoundation } from "@kiwicom/orbit-design-tokens";
 
-import { transformToKebabCase, getComponentLevelToken } from "../src/helpers";
+import { transformToKebabCase, getComponentLevelToken } from "../helpers";
 
 describe("orbit-tailwind-preset", () => {
   it("should transform foundation to kebab case", () => {
@@ -17,7 +17,7 @@ describe("orbit-tailwind-preset", () => {
           "large-desktop": 1200,
           "large-mobile": 576,
           "medium-mobile": 414,
-          "small-mobile": 0,
+          "small-mobile": 320,
           "tablet": 768,
         },
         "font-family": Object {

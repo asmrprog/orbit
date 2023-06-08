@@ -253,7 +253,7 @@ const social = { facebook: "#3B5998", facebookHover: "#385490", facebookActive: 
 const white = { normal: "#FFFFFF", normalActive: "#E7ECF1", normalHover: "#F1F4F7" };
 const borderRadius = { circle: "50%", small: "2px", normal: "3px", large: "6px" };
 const breakpoint = {
-  smallMobile: 0,
+  smallMobile: 320,
   mediumMobile: 414,
   largeMobile: 576,
   tablet: 768,

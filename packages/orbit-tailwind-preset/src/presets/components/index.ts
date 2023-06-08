@@ -14,9 +14,23 @@ const COLORS: Partial<ExportedComponentLevelTokens>[] = [
   "heading",
 ];
 
-const cfg: Config["theme"] = {
-  theme: {
-    extend: {
+interface Options {
+  /** default: true e.g. does not include default normalize styles */
+  disablePreflight?: boolean;
+  /** default: [] */
+  content?: Config["content"];
+}
+
+const cfg = (options?: Options): Config => {
+  const { disablePreflight = true } = options || {};
+
+  return {
+    content: ["auto"],
+    prefix: "orbit-",
+    corePlugins: {
+      preflight: disablePreflight ? false : undefined,
+    },
+    theme: {
       fontSize: {
         ...getComponentLevelToken("heading", "fontSize"),
         ...getComponentLevelToken("button", "fontSize"),
@@ -30,12 +44,12 @@ const cfg: Config["theme"] = {
         ...getComponentLevelToken("heading", "lineHeight"),
       },
       zIndex: {
-        default: defaultTokens.zIndexDefault,
-        sticky: defaultTokens.zIndexSticky,
-        modal: defaultTokens.zIndexModal,
-        "modal-overlay": defaultTokens.zIndexModalOverlay,
-        overlay: defaultTokens.zIndexModalOverlay,
-        drawer: defaultTokens.zIndexDrawer,
+        default: String(defaultTokens.zIndexDefault),
+        sticky: String(defaultTokens.zIndexSticky),
+        modal: String(defaultTokens.zIndexModal),
+        "modal-overlay": String(defaultTokens.zIndexModalOverlay),
+        overlay: String(defaultTokens.zIndexModalOverlay),
+        drawer: String(defaultTokens.zIndexDrawer),
       },
       colors: {
         ...COLORS.reduce((acc, name) => {
@@ -54,7 +68,7 @@ const cfg: Config["theme"] = {
         }, {}),
       },
     },
-  },
+  };
 };
 
 export default cfg;

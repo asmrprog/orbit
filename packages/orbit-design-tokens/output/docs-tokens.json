@@ -52,15 +52,15 @@
     },
     "javascript": {
       "name": "paddingBadge",
-      "value": "0 4px"
+      "value": "0 8px"
     },
     "foundation": {
       "name": "paddingBadge",
-      "value": "0 4px"
+      "value": "0 8px"
     },
     "scss": {
       "name": "paddingBadge",
-      "value": "0 4px"
+      "value": "0 8px"
     }
   },
   "paddingButtonLarge": {
@@ -10456,7 +10456,7 @@
     },
     "javascript": {
       "name": "widthBadgeCircled",
-      "value": "20px"
+      "value": "24px"
     },
     "foundation": {
       "name": "widthBadgeCircled",
@@ -10464,7 +10464,7 @@
     },
     "scss": {
       "name": "widthBadgeCircled",
-      "value": "20px"
+      "value": "24px"
     }
   },
   "widthCheckbox": {
