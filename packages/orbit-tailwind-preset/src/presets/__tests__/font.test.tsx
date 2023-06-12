@@ -1,4 +1,5 @@
 import React from "react";
+import { defaultTokens } from "@kiwicom/orbit-design-tokens";
 
 import { render, screen } from "../../testUtils";
 import FontSizes from "../__fixtures__/FontSizes";
@@ -10,15 +11,15 @@ describe("font sizes", () => {
     render(<FontSizes />);
 
     expect(screen.getByText("Text small")).toHaveStyle({
-      fontSize: "13px",
+      fontSize: defaultTokens.fontSizeTextSmall,
     });
 
     expect(screen.getByText("Text normal")).toHaveStyle({
-      fontSize: "15px",
+      fontSize: defaultTokens.fontSizeTextNormal,
     });
 
     expect(screen.getByText("Text large")).toHaveStyle({
-      fontSize: "16px",
+      fontSize: defaultTokens.fontSizeTextLarge,
     });
   });
 });
@@ -28,15 +29,15 @@ describe("font weights", () => {
     render(<FontWeight />);
 
     expect(screen.getByText("bold")).toHaveStyle({
-      fontWeight: "700",
+      fontWeight: defaultTokens.fontWeightBold,
     });
 
     expect(screen.getByText("normal")).toHaveStyle({
-      fontWeight: "400",
+      fontWeight: defaultTokens.fontWeightNormal,
     });
 
     expect(screen.getByText("medium")).toHaveStyle({
-      fontWeight: "500",
+      fontWeight: defaultTokens.fontWeightMedium,
     });
   });
 });
@@ -46,15 +47,15 @@ describe("line heights", () => {
     render(<LineHeight />);
 
     expect(screen.getByText("leading-small")).toHaveStyle({
-      lineHeight: "16px",
+      lineHeight: defaultTokens.lineHeightTextSmall,
     });
 
     expect(screen.getByText("leading-normal")).toHaveStyle({
-      lineHeight: "20px",
+      lineHeight: defaultTokens.lineHeightTextNormal,
     });
 
     expect(screen.getByText("leading-large")).toHaveStyle({
-      lineHeight: "24px",
+      lineHeight: defaultTokens.lineHeightTextLarge,
     });
   });
 });

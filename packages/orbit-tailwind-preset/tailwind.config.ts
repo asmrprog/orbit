@@ -1,4 +1,4 @@
-import { orbitFoundationPreset } from "./dist";
+import orbitFoundationPreset from "./dist";
 
 export default {
   // include only for testing purposes

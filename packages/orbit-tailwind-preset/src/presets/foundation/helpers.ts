@@ -1,8 +1,5 @@
 import type { defaultFoundation } from "@kiwicom/orbit-design-tokens";
 import { defaultTokens } from "@kiwicom/orbit-design-tokens";
-import type { Config } from "tailwindcss";
-
-const PREFIX = "orbit-";
 
 export interface Options {
   /** default: `true` eg does not include the tailwind preflight */
@@ -50,9 +47,12 @@ type KebabCase<S extends string> = S extends `${infer T}${infer U}`
     : `${Uncapitalize<T>}-${KebabCase<U>}`
   : S;
 
-type TransformedTokens = Record<KebabCase<keyof typeof defaultFoundation>, Record<string, string>>;
+type TransformedTokens = Record<
+  KebabCase<keyof typeof defaultFoundation>,
+  Record<KebabCase<string>, string>
+>;
 
-export const transformToKebabCase = (tokens: typeof defaultFoundation): TransformedTokens => {
+export const transformToKebabCase = (tokens: typeof defaultFoundation) => {
   if (typeof tokens !== "object") return tokens;
 
   return Object.keys(tokens).reduce((acc, key) => {
@@ -87,16 +87,3 @@ export const getComponentLevelToken = (
     return acc;
   }, {});
 };
-
-type PresetCfg = (cfg: Partial<Config>, options: Options) => Config;
-
-export const presetCfg: PresetCfg = (cfg, { content = [], disablePreflight = true }): Config => ({
-  prefix: PREFIX,
-  content,
-  // do not include default tailwind config
-  presets: [],
-  corePlugins: {
-    preflight: disablePreflight,
-  },
-  ...cfg,
-});

@@ -1,10 +1,10 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 
-import { orbitFoundationPreset, orbitComponentsPreset } from "../..";
+import orbitPreset, { orbitComponentsPreset } from "../..";
 
 describe("foundationPreset", () => {
   it("should match snapshot", () => {
-    const cfg = resolveConfig(orbitFoundationPreset);
+    const cfg = resolveConfig(orbitPreset);
     expect(cfg).toMatchSnapshot();
     expect(cfg.corePlugins).not.toContain("preflight");
   });

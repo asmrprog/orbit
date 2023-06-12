@@ -4,7 +4,7 @@ This package contains the Orbit Tailwind presets.
 
 Currently, there are two presets available:
 
-- `orbitFoundationPreset` - Orbit's foundation styles, including typography, colors, spacing, etc.
+- `orbitPreset` - Orbit's foundation styles, including typography, colors, spacing, etc.
 - `orbitComponentsPreset` - Orbit's component tokens. This preset is mainly for Orbit's internal usage and
   migration to Tailwind.
 
@@ -25,25 +25,30 @@ npm install --save-dev @kiwicom/orbit-tailwind-preset
 In your `tailwind.config.js` file, add the following:
 
 ```js
-const { orbitFoundationPreset } = require("@kiwicom/orbit-tailwind-preset");
+const orbitPreset = require("@kiwicom/orbit-tailwind-preset");
 
 module.exports = {
-  presets: [orbitFoundationPreset()],
+  presets: [orbitPreset],
 };
 ```
 
-It also accepts a configuration object:
+We also have preset with component tokens, which means to be used inside Orbit components. In case you need to use our component-level tokens, add the `orbitComponentsPreset` to your `tailwind.config.js` file:
 
 ```js
-const { orbitFoundationPreset } = require("@kiwicom/orbit-tailwind-preset");
+const { orbitComponentsPreset } = require("@kiwicom/orbit-tailwind-preset");
 
 module.exports = {
   presets: [
-    orbitFoundationPreset({
+    orbitComponentsPreset({
       // Enable normalizing of the browser's default styles, which is disabled by default
       disabledPreflight: false,
-      content: ["./src/**/*.ts"],
     }),
   ],
 };
+```
+
+All foundation tokens are prefixed with "orbit-", so you can use them like this:
+
+```html
+<p class="orbit-text-blue-normal">...</p>
 ```

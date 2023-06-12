@@ -31,6 +31,7 @@
     "@kiwicom/orbit-components": "*",
     "@kiwicom/orbit-design-tokens": "*",
     "@kiwicom/orbit-themer": "*",
+    "@kiwicom/orbit-tailwind-preset": "*",
     "@loadable/component": "^5.15.3",
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/mdx": "^1.6.22",

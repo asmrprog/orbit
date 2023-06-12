@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 import { defaultTokens } from "@kiwicom/orbit-design-tokens";
 
-import { getComponentLevelToken, ExportedComponentLevelTokens } from "../../helpers";
+import { getComponentLevelToken, ExportedComponentLevelTokens } from "../foundation/helpers";
 
 const COLORS: Partial<ExportedComponentLevelTokens>[] = [
   "button",
