@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "pretest": "yarn build && yarn tailwindcss -o style.css",
+    "pretest": "yarn workspace @kiwicom/orbit-design-tokens build && yarn build && yarn tailwindcss -o style.css",
     "test": "jest"
   },
   "peerDependencies": {

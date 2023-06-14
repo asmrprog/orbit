@@ -8,13 +8,14 @@ export interface Options {
   content: [];
 }
 
-const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
+export const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 
 export type ExportedComponentLevelTokens =
   | "alert"
   | "button"
   | "buttonLink"
   | "badge"
+  | "icon"
   | "tag"
   | "textLink"
   | "text"
@@ -37,7 +38,10 @@ type ExportedComponentLevelTypes =
   | "foreground"
   | "foregroundHover"
   | "foregroundActive"
+  | "borderColor"
   | "fontSize"
+  | "padding"
+  | "margin"
   | "fontWeight"
   | "lineHeight";
 
