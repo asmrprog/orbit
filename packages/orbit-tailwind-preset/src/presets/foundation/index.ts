@@ -6,7 +6,6 @@ import { spacing, screens, font, boxShadow, duration } from "./theme";
 
 const config: Config = {
   content: ["auto"],
-  prefix: "orbit-",
   corePlugins: {
     preflight: false,
   },

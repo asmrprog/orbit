@@ -47,8 +47,6 @@ module.exports = {
 };
 ```
 
-All foundation tokens are prefixed with "orbit-", so you can use them like this:
-
 ```html
-<p class="orbit-text-blue-normal">...</p>
+<p class="text-blue-normal">...</p>
 ```

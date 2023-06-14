@@ -34,7 +34,6 @@ const cfg = (options?: Options): Config => {
 
   return {
     content: ["auto"],
-    prefix: "orbit-",
     corePlugins: {
       preflight: disablePreflight ? false : undefined,
     },
