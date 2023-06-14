@@ -3,9 +3,9 @@ import React from "react";
 const FontSizes = () => {
   return (
     <div>
-      <p className="orbit-text-small">Text small</p>
-      <p className="orbit-text-normal">Text normal</p>
-      <p className="orbit-text-large">Text large</p>
+      <p className="text-small">Text small</p>
+      <p className="text-normal">Text normal</p>
+      <p className="text-large">Text large</p>
     </div>
   );
 };
