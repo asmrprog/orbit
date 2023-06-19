@@ -17,14 +17,16 @@ const config: Config = {
     boxShadow,
     transitionDuration: duration,
     ...font,
-    spacing,
-    zIndex: {
-      default: String(defaultTokens.zIndexDefault),
-      sticky: String(defaultTokens.zIndexSticky),
-      modal: String(defaultTokens.zIndexModal),
-      overlay: String(defaultTokens.zIndexModalOverlay),
-      drawer: String(defaultTokens.zIndexDrawer),
-      onTop: String(defaultTokens.zIndexOnTheTop),
+    extend: {
+      spacing,
+      zIndex: {
+        default: String(defaultTokens.zIndexDefault),
+        sticky: String(defaultTokens.zIndexSticky),
+        modal: String(defaultTokens.zIndexModal),
+        overlay: String(defaultTokens.zIndexModalOverlay),
+        drawer: String(defaultTokens.zIndexDrawer),
+        onTop: String(defaultTokens.zIndexOnTheTop),
+      },
     },
   },
 };
