@@ -3188,6 +3188,10 @@
     <value>16</value>
   </token>
   <token>
+    <name>fontSizeTextExtraLarge</name>
+    <value>18</value>
+  </token>
+  <token>
     <name>lineHeightText</name>
     <value>1.4</value>
   </token>

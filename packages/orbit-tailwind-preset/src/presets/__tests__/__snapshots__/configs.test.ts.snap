@@ -10944,6 +10944,7 @@ Object {
       "base": "'Roboto', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif",
     },
     "fontSize": Object {
+      "extra-large": "18px",
       "large": "16px",
       "normal": "15px",
       "small": "13px",

@@ -121,7 +121,7 @@ export type Space = {
   XXXLarge: string;
 };
 export type FontFamily = { base: string };
-export type FontSize = { small: string; normal: string; large: string };
+export type FontSize = { small: string; normal: string; large: string; extraLarge: string };
 export type LineHeight = { small: string; normal: string; large: string };
 export type FontWeight = { normal: string; medium: string; bold: string };
 export type Palette = {
@@ -281,7 +281,7 @@ const space = {
 const fontFamily = {
   base: "'Roboto', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif",
 };
-const fontSize = { small: "13px", normal: "15px", large: "16px" };
+const fontSize = { small: "13px", normal: "15px", large: "16px", extraLarge: "18px" };
 const lineHeight = { small: "16px", normal: "20px", large: "24px" };
 const fontWeight = { normal: "400", medium: "500", bold: "700" };
 const palette = { blue, cloud, green, ink, orange, product, red, social, white };

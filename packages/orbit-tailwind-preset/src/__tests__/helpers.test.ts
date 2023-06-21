@@ -24,6 +24,7 @@ describe("orbit-tailwind-preset", () => {
           "base": "'Roboto', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif",
         },
         "font-size": Object {
+          "extra-large": "18px",
           "large": "16px",
           "normal": "15px",
           "small": "13px",

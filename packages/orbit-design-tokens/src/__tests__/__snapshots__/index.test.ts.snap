@@ -480,6 +480,7 @@ Object {
   "fontSizeInputNormal": "15px",
   "fontSizeInputSmall": "15px",
   "fontSizeMessage": "15px",
+  "fontSizeTextExtraLarge": "18px",
   "fontSizeTextLarge": "16px",
   "fontSizeTextNormal": "15px",
   "fontSizeTextSmall": "13px",
