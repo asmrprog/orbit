@@ -16,9 +16,9 @@ const config: Config = {
     lineHeight: defaultFoundation["line-height"],
     boxShadow,
     transitionDuration: duration,
+    spacing,
     ...font,
     extend: {
-      spacing,
       zIndex: {
         default: String(defaultTokens.zIndexDefault),
         sticky: String(defaultTokens.zIndexSticky),
