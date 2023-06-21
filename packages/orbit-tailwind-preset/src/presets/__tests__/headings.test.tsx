@@ -12,8 +12,8 @@ const HEADINGS = [
   "title4",
   "title5",
   "title6",
-  "display",
   "displaySubtitle",
+  "display",
 ];
 
 describe("Headings", () => {
@@ -22,6 +22,8 @@ describe("Headings", () => {
     HEADINGS.forEach(heading => {
       expect(screen.getByText(heading)).toHaveStyle({
         fontSize: defaultTokens[`heading${firstToUpper(heading)}FontSize`],
+        fontWeight: defaultTokens[`heading${firstToUpper(heading)}FontWeight`],
+        lineHeight: defaultTokens[`heading${firstToUpper(heading)}LineHeight`],
       });
     });
   });
