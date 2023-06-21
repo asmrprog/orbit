@@ -10,6 +10,8 @@ export interface Options {
 
 export const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 
+export const firstToUpper = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+
 export type ExportedComponentLevelTokens =
   | "alert"
   | "button"

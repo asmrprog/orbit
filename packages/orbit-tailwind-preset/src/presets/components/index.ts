@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import { defaultTokens } from "@kiwicom/orbit-design-tokens";
 import plugin from "tailwindcss/plugin";
 
+import orbitFoundationPreset from "../..";
 import {
   kebabCase,
   getComponentLevelToken,
@@ -34,23 +35,66 @@ const cfg = (options?: Options): Config => {
 
   return {
     content: ["auto"],
+    presets: [orbitFoundationPreset],
     corePlugins: {
       preflight: disablePreflight ? false : undefined,
     },
     theme: {
       extend: {
+        colors: {
+          ...COLORS.reduce((acc, name) => {
+            // eslint-disable-next-line no-param-reassign
+            acc = {
+              ...acc,
+              ...getComponentLevelToken(name, "background"),
+              ...getComponentLevelToken(name, "backgroundHover"),
+              ...getComponentLevelToken(name, "backgroundActive"),
+              ...getComponentLevelToken(name, "foreground"),
+              ...getComponentLevelToken(name, "foregroundHover"),
+              ...getComponentLevelToken(name, "foregroundActive"),
+              ...getComponentLevelToken(name, "borderColor"),
+            };
+
+            return acc;
+          }, {}),
+        },
         fontSize: {
-          ...getComponentLevelToken("heading", "fontSize"),
-          ...getComponentLevelToken("button", "fontSize"),
-          ...getComponentLevelToken("formElement", "fontSize"),
+          "heading-display": defaultTokens.headingDisplayFontSize,
+          "heading-display-subtitle": defaultTokens.headingDisplaySubtitleFontSize,
+          "heading-title1": defaultTokens.headingTitle1FontSize,
+          "heading-title2": defaultTokens.headingTitle2FontSize,
+          "heading-title3": defaultTokens.headingTitle3FontSize,
+          "heading-title4": defaultTokens.headingTitle4FontSize,
+          "heading-title5": defaultTokens.headingTitle5FontSize,
+          "heading-title6": defaultTokens.headingTitle6FontSize,
+          "button-large": defaultTokens.buttonLargeFontSize,
+          "button-normal": defaultTokens.buttonNormalFontSize,
+          "button-small": defaultTokens.buttonSmallFontSize,
+          "form-element-normal": defaultTokens.formElementNormalFontSize,
+          "form-element-small": defaultTokens.formElementSmallFontSize,
         },
         fontWeight: {
-          ...getComponentLevelToken("heading", "fontWeight"),
-          ...getComponentLevelToken("textLink", "fontWeight"),
+          "heading-display": defaultTokens.fontWeightHeadingDisplay,
+          "heading-display-subtitle": defaultTokens.fontWeightHeadingDisplaySubtitle,
+          "heading-title1": defaultTokens.fontWeightHeadingTitle1,
+          "heading-title2": defaultTokens.fontWeightHeadingTitle2,
+          "heading-title3": defaultTokens.fontWeightHeadingTitle3,
+          "heading-title4": defaultTokens.fontWeightHeadingTitle4,
+          "heading-title5": defaultTokens.fontWeightHeadingTitle5,
+          "heading-title6": defaultTokens.fontWeightHeadingTitle6,
           "table-head": String(defaultTokens.fontWeightTableHead),
         },
         lineHeight: {
-          ...getComponentLevelToken("heading", "lineHeight"),
+          heading: defaultTokens.lineHeightHeading,
+          "heading-display": defaultTokens.headingDisplayLineHeight,
+          "heading-display-subtitle": defaultTokens.headingDisplaySubtitleLineHeight,
+          "heading-title1": defaultTokens.headingTitle1LineHeight,
+          "heading-title2": defaultTokens.headingTitle2LineHeight,
+          "heading-title3": defaultTokens.headingTitle3LineHeight,
+          "heading-title4": defaultTokens.headingTitle4LineHeight,
+          "heading-title5": defaultTokens.headingTitle5LineHeight,
+          "heading-title6": defaultTokens.headingTitle6LineHeight,
+          checkbox: defaultTokens.heightCheckbox,
         },
         height: {
           "icon-small": defaultTokens.heightIconSmall,
@@ -73,23 +117,6 @@ const cfg = (options?: Options): Config => {
           ...getComponentLevelToken("button", "padding"),
           ...getComponentLevelToken("formElement", "padding"),
           table: defaultTokens.paddingTable,
-        },
-        colors: {
-          ...COLORS.reduce((acc, name) => {
-            // eslint-disable-next-line no-param-reassign
-            acc = {
-              ...acc,
-              ...getComponentLevelToken(name, "background"),
-              ...getComponentLevelToken(name, "backgroundHover"),
-              ...getComponentLevelToken(name, "backgroundActive"),
-              ...getComponentLevelToken(name, "foreground"),
-              ...getComponentLevelToken(name, "foregroundHover"),
-              ...getComponentLevelToken(name, "foregroundActive"),
-              ...getComponentLevelToken(name, "borderColor"),
-            };
-
-            return acc;
-          }, {}),
         },
         borderColor: {
           ...Object.keys(defaultTokens).reduce((acc, token) => {

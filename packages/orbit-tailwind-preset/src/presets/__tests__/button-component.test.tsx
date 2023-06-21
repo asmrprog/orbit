@@ -3,8 +3,7 @@ import { defaultTokens, convertHexToRgba } from "@kiwicom/orbit-design-tokens";
 
 import Button from "../__fixtures__/Button";
 import { render, screen } from "../../testUtils";
-
-const firstToUpper = (string: string) => string.charAt(0).toUpperCase() + string.slice(1);
+import { firstToUpper } from "../foundation/helpers";
 
 const testIds = ["primary", "secondary", "info", "success", "warning", "critical"];
 

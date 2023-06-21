@@ -6,7 +6,7 @@ Currently, there are two presets available:
 
 - `orbitPreset` - Orbit's foundation styles, including typography, colors, spacing, etc.
 - `orbitComponentsPreset` - Orbit's component tokens. This preset is mainly for Orbit's internal usage and
-  migration to Tailwind.
+  migration to Tailwind. It already includes the `orbitPreset` and adds component-level tokens.
 
 ## Installation
 
