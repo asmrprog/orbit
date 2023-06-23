@@ -111,7 +111,7 @@ We take advantage of how style-dictionary handles aliases for achieving the goal
 
 The whole foundation visual language is defined and stored in the `foundation` namespace and then referenced via aliases into `global` namespace. Since we don't want to have the same design tokens twice in the generated output, we need to mark them with the `internal` boolean attribute.
 
-Therefore, the implementation of `foundation.space.one-x` design token will be the following:
+Therefore, the implementation of `foundation.space.small` design token will be the following:
 
 ```json
 {
@@ -210,7 +210,9 @@ Based on our [elevation system](https://orbit.kiwi/foundation/elevation-hierarch
 – flat
 – action
 – fixed
+– fixedReverse
 – raised
+– raisedReverse
 – overlay
 
 ### Viewports
@@ -235,7 +237,6 @@ Based on our structure of color palette, it could be split into vertical and hor
 
 Possible vertical shades:
 
-- lighter
 - light
 - normal
 - dark
