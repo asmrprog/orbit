@@ -24,6 +24,8 @@
   "scripts": {
     "fetch:colors": "zx ./scripts/fetchBaseTokens.mjs",
     "check:types": "tsc",
+    "check:lint": "eslint . --report-unused-disable-directives",
+    "test": "jest",
     "generate:json": "ts-node-esm ./src/theo/generate-theo-parser.ts",
     "generate:flow": "npx flowgen --output-file ./dist/index.js.flow ./dist/index.d.ts --add-flow-header",
     "build-html": "theo --setup ./src/theo/setup.cjs ./src/theo/theo-spec.json --format kiwi.html --dest ./pages",
