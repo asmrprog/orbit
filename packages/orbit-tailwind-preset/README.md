@@ -4,7 +4,7 @@ This package contains the Orbit Tailwind presets.
 
 Currently, there are two presets available:
 
-- `orbitPreset` - Orbit's foundation styles, including typography, colors, spacing, etc.
+- `orbitPreset` **(default export)** - Orbit's foundation styles, including typography, colors, spacing, etc.
 - `orbitComponentsPreset` - Orbit's component tokens. This preset is mainly for Orbit's internal usage and
   migration to Tailwind. It already includes the `orbitPreset` and adds component-level tokens.
 
@@ -32,7 +32,7 @@ module.exports = {
 };
 ```
 
-We also have preset with component tokens, which means to be used inside Orbit components. In case you need to use our component-level tokens, add the `orbitComponentsPreset` to your `tailwind.config.js` file:
+We also have a preset with component tokens, which is meant to be used inside Orbit components. In case you need to use our component-level tokens, add the `orbitComponentsPreset` to your `tailwind.config.js` file:
 
 ```js
 const { orbitComponentsPreset } = require("@kiwicom/orbit-tailwind-preset");

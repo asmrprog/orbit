@@ -14,7 +14,7 @@ const SPACINGS = [
   "spaceXLarge",
   "spaceXXLarge",
   "spaceXXXLarge",
-] as const;
+];
 
 describe("Spacings", () => {
   it("should generate correct styles", () => {
