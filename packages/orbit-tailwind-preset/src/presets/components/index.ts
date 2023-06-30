@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
-import { defaultTokens } from "@kiwicom/orbit-design-tokens";
 import plugin from "tailwindcss/plugin";
+import { defaultTokens } from "@kiwicom/orbit-design-tokens";
+import type { Config } from "tailwindcss";
 
 import orbitFoundationPreset from "../..";
 import {
@@ -131,6 +131,11 @@ const cfg = (options?: Options): Config => {
           white: defaultTokens.paletteWhite,
           "radio-hover": defaultTokens.paletteBlueLightActive,
           "radio-active": defaultTokens.paletteBlueNormal,
+          "form-element": defaultTokens.formElementBorderColor,
+          "form-element-hover": defaultTokens.formElementBorderColorHover,
+          "form-element-active": defaultTokens.formElementBorderColorActive,
+          "form-element-focus": defaultTokens.formElementBorderColorFocus,
+          "form-element-error": defaultTokens.formElementBorderColorError,
         },
         keyframes: {
           "slow-pulse": {
