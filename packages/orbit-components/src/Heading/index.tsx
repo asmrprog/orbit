@@ -2,9 +2,10 @@ import * as React from "react";
 import cx from "classnames";
 
 import { ELEMENT_OPTIONS, TYPE_OPTIONS, ALIGN } from "./consts";
+import { spaceAfterClasses, textAlignClasses } from "../common/twCommon";
 import { QUERIES } from "../utils/mediaQuery/consts";
 import type { Props } from "./types";
-import { typeClasses, textAlignClasses, spaceAfterClasses } from "./twClasses";
+import { typeClasses } from "./twClasses";
 
 const Heading = ({
   children,
