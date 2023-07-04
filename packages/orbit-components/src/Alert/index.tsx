@@ -19,7 +19,6 @@ import { rtlSpacing, right, left } from "../utils/rtl";
 import getSpacingToken from "../common/getSpacingToken";
 import { Item } from "../List/ListItem";
 import { StyledText } from "../Text";
-import { StyledHeading } from "../Heading";
 import media from "../utils/mediaQuery";
 
 const getTypeToken =
@@ -216,7 +215,7 @@ const StyledContent = styled.div<{ inlineActions?: boolean; $type: Type; $noUnde
       ${getLinkStyle};
     }
 
-    & ${Item}, ${StyledText}, ${StyledHeading} {
+    & ${Item}, ${StyledText}, .orbit-heading {
       color: ${theme.orbit.paletteInkDark};
     }
   `}
