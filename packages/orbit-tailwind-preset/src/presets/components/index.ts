@@ -21,6 +21,7 @@ const COLORS: Partial<ExportedComponentLevelTokens>[] = [
   "textLink",
   "text",
   "heading",
+  "countryFlag",
 ];
 
 interface Options {
@@ -106,12 +107,16 @@ const cfg = (options?: Options): Config => {
           "button-normal": defaultTokens.heightButtonNormal,
           "button-large": defaultTokens.heightButtonLarge,
           checkbox: defaultTokens.heightCheckbox,
+          "country-flag-small": defaultTokens.countryFlagSmallHeight,
+          "country-flag-medium": defaultTokens.countryFlagMediumHeight,
         },
         width: {
           "icon-small": defaultTokens.widthIconSmall,
           "icon-medium": defaultTokens.widthIconMedium,
           "icon-large": defaultTokens.widthIconLarge,
           checkbox: defaultTokens.widthCheckbox,
+          "country-flag-small": defaultTokens.countryFlagSmallWidth,
+          "country-flag-medium": defaultTokens.countryFlagMediumWidth,
         },
         padding: {
           ...getComponentLevelToken("button", "padding"),
@@ -136,6 +141,9 @@ const cfg = (options?: Options): Config => {
           "form-element-active": defaultTokens.formElementBorderColorActive,
           "form-element-focus": defaultTokens.formElementBorderColorFocus,
           "form-element-error": defaultTokens.formElementBorderColorError,
+        },
+        boxShadow: {
+          "country-flag": defaultTokens.countryFlagShadow,
         },
         keyframes: {
           "slow-pulse": {
