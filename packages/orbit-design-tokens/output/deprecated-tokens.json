@@ -343,7 +343,6 @@
     "version": "1.0.0"
   },
   "backgroundCountryFlag": {
-    "replaceForToken": null,
     "version": "1.0.0"
   },
   "backgroundServiceLogo": {
