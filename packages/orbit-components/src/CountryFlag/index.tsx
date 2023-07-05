@@ -1,77 +1,52 @@
 import React from "react";
-import styled from "styled-components";
-import { convertHexToRgba } from "@kiwicom/orbit-design-tokens";
+import cx from "classnames";
 
-import type { Theme } from "../defaultTheme";
-import defaultTheme from "../defaultTheme";
-import { baseURL, CODES, SIZES, TOKENS } from "./consts";
-import type { Props, Size } from "./types";
+import { baseURL, CODES, SIZE_WIDTHS, SIZES } from "./consts";
+import type { Props } from "./types";
 
-const getSizeToken =
-  (name: string) =>
-  ({ theme, size }: { theme: Theme; size: Size }) => {
-    const tokens = {
-      [TOKENS.WIDTH]: {
-        [SIZES.SMALL]: "16px",
-        [SIZES.MEDIUM]: theme.orbit.widthCountryFlag,
-      },
-      [TOKENS.HEIGHT]: {
-        [SIZES.SMALL]: "9px",
-        [SIZES.MEDIUM]: "13px",
-      },
-    };
-    return tokens[name][size];
-  };
-
-const StyledCountryFlag = styled.div<{ size: Size }>`
-  position: relative;
-  height: ${getSizeToken(TOKENS.HEIGHT)};
-  width: ${getSizeToken(TOKENS.WIDTH)};
-  background-color: ${({ theme }) => theme.orbit.backgroundCountryFlag};
-  border-radius: ${({ theme }) => theme.orbit.borderRadiusSmall};
-  overflow: hidden;
-  flex-shrink: 0;
-`;
-
-StyledCountryFlag.defaultProps = {
-  theme: defaultTheme,
+const Wrapper = ({ children, size }) => {
+  return (
+    <div
+      className={cx("relative bg-country-flag-background rounded-small overflow-hidden shrink-0", {
+        "w-country-flag-small h-country-flag-small": size === SIZES.SMALL,
+        "w-country-flag-medium h-country-flag-medium": size === SIZES.MEDIUM,
+      })}
+    >
+      {children}
+    </div>
+  );
 };
 
-export const StyledImage: any = styled.img.attrs<{ size: Size; code: string }>(
-  ({ theme, size, code }: { theme: Theme; size: Size; code: string }) => {
-    const width = parseInt(getSizeToken(TOKENS.WIDTH)({ theme, size }), 10);
-    return {
-      src: `${baseURL}/flags/${width}x0/flag-${code.toLowerCase()}.jpg`,
-      srcSet: `${baseURL}/flags/${width * 2}x0/flag-${code.toLowerCase()}.jpg 2x`,
-    };
-  },
-)`
-  display: block;
-  height: 100%;
-  width: 100%;
-  flex-shrink: 0;
-`;
+const Image = ({
+  code,
+  name,
+  id,
+  dataTest,
+  src,
+  srcSet,
+}: {
+  code: Props["code"];
+  name: Props["name"];
+  id: Props["id"];
+  dataTest: Props["dataTest"];
+  src: string;
+  srcSet: string;
+}) => (
+  <img
+    className="block h-full w-full shrink-0"
+    key={code}
+    alt={name}
+    title={name}
+    id={id}
+    data-test={dataTest}
+    src={src}
+    srcSet={srcSet}
+  />
+);
 
-StyledImage.defaultProps = {
-  theme: defaultTheme,
-};
-
-const StyledShadow = styled.div`
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  box-shadow: inset 0 0 0 1px ${({ theme }) => convertHexToRgba(theme.orbit.paletteInkDark, 10)};
-  border-radius: ${({ theme }) => theme.orbit.borderRadiusSmall};
-`;
-
-StyledShadow.defaultProps = {
-  theme: defaultTheme,
-};
+const Shadow = () => (
+  <div className="absolute block h-full w-full top-0 right-0 bottom-0 left-0 shadow-country-flag rounded-small" />
+);
 
 function getCountryProps(code?: string, name?: string) {
   const codeNormalized = code ? code.toUpperCase().replace("-", "_") : "UNDEFINED";
@@ -86,19 +61,16 @@ function getCountryProps(code?: string, name?: string) {
 
 const CountryFlag = ({ dataTest, size = SIZES.MEDIUM, id, ...props }: Props) => {
   const { code, name } = getCountryProps(props.code, props.name);
+
+  const width = SIZE_WIDTHS[size];
+  const src = `${baseURL}/flags/${width}x0/flag-${code.toLowerCase()}.jpg`;
+  const srcSet = `${baseURL}/flags/${width * 2}x0/flag-${code.toLowerCase()}.jpg 2x`;
+
   return (
-    <StyledCountryFlag size={size}>
-      <StyledImage
-        key={code}
-        alt={name}
-        title={name}
-        code={code}
-        id={id}
-        data-test={dataTest}
-        size={size}
-      />
-      <StyledShadow />
-    </StyledCountryFlag>
+    <Wrapper size={size}>
+      <Image code={code} name={name} id={id} dataTest={dataTest} src={src} srcSet={srcSet} />
+      <Shadow />
+    </Wrapper>
   );
 };
 
