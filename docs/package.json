@@ -87,7 +87,7 @@
     "gatsby-remark-smartypants": "^5.9.0",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-transformer-sharp": "^4.11.0",
-    "globby": "^11.0.2",
+    "globby": "^14.1.0",
     "gray-matter": "^4.0.2",
     "js-yaml": "^4.0.0",
     "jsondiffpatch": "^0.4.1",
@@ -122,6 +122,6 @@
     "use-resize-observer": "^8.0.0",
     "uuid": "^8.3.2",
     "vfile-reporter": "^7.0.5",
-    "webpack": "^5.76.0"
+    "webpack": "^5.98.0"
   }
 }
