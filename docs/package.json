@@ -90,7 +90,7 @@
     "globby": "^11.0.2",
     "gray-matter": "^4.0.2",
     "js-yaml": "^4.0.0",
-    "jsondiffpatch": "^0.4.1",
+    "jsondiffpatch": "^0.7.2",
     "lodash": "^4.17.21",
     "memfs": "^3.2.0",
     "prism-react-renderer": "^1.2.1",
